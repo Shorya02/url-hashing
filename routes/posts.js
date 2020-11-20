@@ -11,9 +11,8 @@ router.get('/', (req, res) => {
 }); */
 
 router.post('/', (req, res) => {
-    console.log('Request Body ' + req.body);
+    console.log('Request Body ' + req.body.title + ' ' + req.body.description);
     res.send('Received the Post Data');
-    console.log('Response Body ' + res);
 });
 
 module.exports = router;

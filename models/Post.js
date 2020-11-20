@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 
-const PostSchema = mongoose.Schema({
-    title: {
+const HashSchema = mongoose.Schema({
+    url: {
         type: String,
         required: true
     },
-    description: {
+    hash: {
         type: String,
         required: true
     },
-    date: {
-        type: Date,
-        default: Date.now
+    expiryFlag: {
+        type: Boolean,
+        default: false
     }
 });
 
-module.exports = mongoose.model('Posts', PostSchema);
+module.exports = mongoose.model('Posts', HashSchema);

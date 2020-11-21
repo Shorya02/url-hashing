@@ -28,7 +28,7 @@
         <% shortUrls.forEach(shortUrl => { %>
           <tr>
             <td style="width:40%"><a href="<%= shortUrl.url %>"><%= shortUrl.url %></a></td>
-            <td style="width:40%"><a href="/t/<%= shortUrl.hash %>"><%= fullHashedUrl %><%=shortUrl.hash%></a></td>
+            <td style="width:40%"><a href="/t/<%= shortUrl.hash %>"><%= fullHashedUrl %>t/<%=shortUrl.hash%></a></td>
             <td style="width:20%"><%= shortUrl.clickCounter %></td>
           </tr>
         <% }) %>

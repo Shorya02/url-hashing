@@ -8,9 +8,9 @@ var secret = process.env.SECRET || "some random secret";
 function generateURL(host, port, hash) {
     console.log("GenerateUrl", hash);
     if (port) {
-        return host + ":" + port + "/t/" + hash;
+        return 'http://' + host + ":" + port + "/t/" + hash;
     } else {
-        return host + "/t/" + hash;
+        return 'https://' + host + "/t/" + hash;
     }
 }
 

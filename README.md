@@ -1,3 +1,5 @@
+The solution is deployed on https://url-hashing.herokuapp.com/
+
 Using Express JS over Node with MongoDB as the Database. Used EJS as a View to serve as UI with the data.
 
 1. MongoDB - No SQL database provides scalability in the long run with high Read and Write Rates with the provision of using multiples server instances controlled                by a co-ordination service.
@@ -14,4 +16,7 @@ Other Modules/Dependencies utilized:
 3. body-parser
 4. shortid
 5. ejs
+
+
+Further Info is provided in setup.md
 

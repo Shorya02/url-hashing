@@ -19,7 +19,7 @@ function createHash(req, res) {
     let host = req.hostname;
     let port = host == "localhost" ? process.env.PORT : null;
     console.log('Host Name :', host);
-    let hash = crypto.createHmac('sha256', secret).update(url).digest('base64');
+    let hash = crypto.createHmac('sha256', secret).update(url).digest('hex');
     // res.json({ "hashedURL": hashedURL });
     console.log('Value of Hash ' + hash);
     Post.find({ hash: hash }).exec().then(function (response) {

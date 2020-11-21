@@ -1,5 +1,8 @@
 The solution is deployed on Heroku. Use the url: https://url-hashing.herokuapp.com/
 
+UI with a simple form input that would work with the API to hash and store Urls.
+
+
 API Endpoint: https://url-hashing.herokuapp.com/tiny
 
 

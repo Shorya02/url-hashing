@@ -7,10 +7,14 @@ function getUrl(req, res) {
     Post.findOne({ hash: hash }).exec().then(function (response) {
         console.log(response, ' From DB');
         if (response && response.url) {
-            res.writeHead(302, {
-                'Location': response.url
-            });
-            res.end();
+            // res.writeHead(302, {
+            //     'Location': response.url
+            // });
+            // res.end();
+            response.clickCounter++;
+            response.save();
+            console.log(response.url, 'Response');
+            res.redirect(response.url);
         } else {
             res.send("Incorrect Url");
         }

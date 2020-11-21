@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const shortId = require('shortid');
+
 
 const HashSchema = mongoose.Schema({
     url: {
@@ -7,11 +9,13 @@ const HashSchema = mongoose.Schema({
     },
     hash: {
         type: String,
-        required: true
+        required: true,
+        default: shortId.generate
     },
-    expiryFlag: {
-        type: Boolean,
-        default: false
+    clickCounter: {
+        type: Number,
+        default: 0,
+        required: true
     }
 });
 

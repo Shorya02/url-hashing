@@ -8,7 +8,10 @@ var port = process.env.PORT || 8000;
 
 config.init();
 
+app.set('view engine', 'ejs');
+
 //Body-Parser
+app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/', controller);

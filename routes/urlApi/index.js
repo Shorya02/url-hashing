@@ -5,15 +5,9 @@ var Post = require('../../models/Post');
 function getUrl(req, res) {
     let hash = req.params.hash;
     Post.findOne({ hash: hash }).exec().then(function (response) {
-        console.log(response, ' From DB');
         if (response && response.url) {
-            // res.writeHead(302, {
-            //     'Location': response.url
-            // });
-            // res.end();
             response.clickCounter++;
             response.save();
-            console.log(response.url, 'Response');
             res.redirect(response.url);
         } else {
             res.send("Incorrect Url");
